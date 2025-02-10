@@ -8,6 +8,17 @@ const showMenu = (toggleId, navId) => {
       });
     }
   };
+
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('header');
+    
+    // Check if the page has been scrolled down
+    if (window.scrollY > 50) { // Adjust the scroll threshold if needed
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    }
+  });  
   
   showMenu('nav-toggle', 'nav-menu')
   
